@@ -13,6 +13,11 @@ wbL(더블유아일랜드 주얼리 브랜드) 디자인 시스템 스타일 가
 Brand Identity · Brand Concept · Color · Semantic Color · Typography · Spacing · Radius · Elevation ·
 Button · Badge & Label · Form & Input · Tab & Chip · Alert & Toast · Photography · UX Writing · Do / Don't
 
+## 적용 방법
+
+실제 작업물에 이 스타일가이드를 입히는 방법은 **[적용가이드.md](적용가이드.md)** 참고:
+Claude 스킬(`wbl-design`), 붙여넣기용 프롬프트, 드롭인 토큰 CSS, Cafe24·Figma 적용 등.
+
 ## 원천
 
 모든 디자인 토큰은 Figma `wbL Primitives / Semantic`을 단일 원천으로 삼습니다.
