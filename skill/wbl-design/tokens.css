@@ -1,0 +1,83 @@
+/* =========================================================
+   wbL DESIGN SYSTEM — DROP-IN TOKENS
+   Source of truth: Figma "wbL Primitives / Semantic"
+   라이브 가이드: https://w-island.github.io/wbl-styleguide/
+   사용법: 이 파일을 프로젝트에 넣고(<link> 또는 <style>에 복붙),
+          색은 반드시 아래 시맨틱 토큰(var(--...))으로만 쓴다.
+   ========================================================= */
+
+/* ---- PRIMITIVES (테마 불문 고정) ---- */
+:root {
+  --green-50:#eef1ea; --green-100:#dce4d6; --green-200:#c8d3be; --green-300:#b6c3a8;
+  --green-400:#a5b398; --green-500:#8c9b7e; --green-600:#6e7e5f; --green-700:#515e45;
+  --green-800:#39432f; --green-900:#20271a; --green-accent:#7ca04e;
+
+  --blue-50:#eff3f6; --blue-100:#dce4e9; --blue-200:#cad3da; --blue-300:#abbac4;
+  --blue-400:#8b9dab; --blue-500:#6c7e8d; --blue-600:#51626f; --blue-700:#3b4954;
+  --blue-800:#28323b; --blue-900:#131a20;
+
+  --pink-50:#fbeef2; --pink-100:#f3d8e0; --pink-200:#e6bbc8; --pink-300:#d7a0b2;
+  --pink-400:#c691a3; --pink-500:#a86e83; --pink-600:#875468; --pink-700:#653e4e;
+  --pink-800:#432835; --pink-900:#24121b;
+
+  --gray-white:#ffffff; --gray-50:#f7f7f7; --gray-100:#f0f0f0; --gray-200:#d9d9d9;
+  --gray-300:#d7d7d7; --gray-400:#bcbcbc; --gray-500:#9e9e9e; --gray-600:#7c7c7c;
+  --gray-700:#565656; --gray-800:#363636; --gray-900:#252525;
+
+  /* brand named */
+  --brand-green:#a5b398; --brand-ivory:#e4e0d5; --brand-charcoal:#454342;
+  --brand-blue:#cad3da; --brand-pink:#c691a3;
+
+  /* state (테마 불문 고정) */
+  --state-sale:#c0392b; --state-success:#515e45; --state-error:#c0392b;
+
+  /* radius / spacing / layout / motion */
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:20px; --r-pill:999px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+
+/* ---- LIGHT THEME (기본) ---- */
+:root, [data-theme="light"] {
+  --bg-default:#ffffff;
+  --bg-surface:var(--gray-50);
+  --bg-subtle:var(--brand-ivory);
+  --text-title:var(--gray-800);
+  --text-primary:#3e3948;
+  --text-secondary:var(--gray-600);
+  --text-disabled:var(--gray-400);
+  --border:var(--gray-300);
+  --divider:var(--gray-400);
+  --placeholder:var(--gray-200);
+  --brand-default:var(--brand-green);
+  --brand-strong:var(--green-700);
+  --action-default:var(--brand-charcoal);
+  --action-hover:#2e2c2b;
+  --action-on:#ffffff;
+  --price:var(--gray-800);
+  --shadow-sm:0 1px 3px rgba(69,67,66,.07);
+  --shadow-md:0 6px 18px rgba(69,67,66,.09);
+  --shadow-lg:0 16px 40px rgba(69,67,66,.12);
+}
+
+/* ---- DARK THEME ---- */
+[data-theme="dark"] {
+  --bg-default:var(--gray-900);
+  --bg-surface:#2f2e2c;
+  --bg-subtle:#34322d;
+  --text-title:rgba(255,255,255,.96);
+  --text-primary:rgba(255,255,255,.88);
+  --text-secondary:rgba(255,255,255,.60);
+  --text-disabled:rgba(255,255,255,.32);
+  --border:rgba(255,255,255,.14);
+  --divider:rgba(255,255,255,.10);
+  --placeholder:rgba(255,255,255,.16);
+  --brand-default:var(--brand-green);
+  --brand-strong:var(--green-300);
+  --action-default:var(--brand-ivory);
+  --action-hover:#cfcabb;
+  --action-on:var(--brand-charcoal);
+  --price:rgba(255,255,255,.92);
+  --shadow-sm:0 1px 3px rgba(0,0,0,.4);
+  --shadow-md:0 6px 18px rgba(0,0,0,.5);
+  --shadow-lg:0 16px 40px rgba(0,0,0,.6);
+}

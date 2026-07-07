@@ -16,7 +16,9 @@ Button · Badge & Label · Form & Input · Tab & Chip · Alert & Toast · Photog
 ## 적용 방법
 
 실제 작업물에 이 스타일가이드를 입히는 방법은 **[적용가이드.md](적용가이드.md)** 참고:
-Claude 스킬(`wbl-design`), 붙여넣기용 프롬프트, 드롭인 토큰 CSS, Cafe24·Figma 적용 등.
+Claude 스킬(`wbl-design`) 설치·사용, 붙여넣기용 프롬프트, 드롭인 토큰 CSS, Cafe24·Figma 적용 등.
+
+- **누구나 설치 가능한 Claude 스킬:** [`skill/wbl-design/`](skill/wbl-design/) — 자기 PC의 `~/.claude/skills/` 또는 팀 레포 `.claude/skills/`에 복사하면 됩니다.
 
 ## 원천
 
