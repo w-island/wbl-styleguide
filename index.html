@@ -334,10 +334,31 @@ section { margin-bottom:64px; scroll-margin-top:84px; }
 .wx .box.bad .tag { color:var(--state-error); }
 .wx .box p { font-size:14px; color:var(--text-primary); }
 
+/* ---- ICONOGRAPHY ---- */
+.icogrid { display:grid; gap:16px; }
+.icogrid.cols-4 { grid-template-columns:repeat(4,1fr); }
+.icogrid.cols-6 { grid-template-columns:repeat(6,1fr); gap:12px; }
+.icocard { background:var(--bg-default); border:1px solid var(--border); border-radius:var(--r-md);
+  padding:26px 10px 20px; text-align:center; transition:.18s var(--ease); }
+.icocard:hover { border-color:var(--brand-default); transform:translateY(-3px); box-shadow:var(--shadow-sm); }
+.icocard.hl { border-color:var(--brand-default); box-shadow:0 0 0 3px var(--green-50); }
+[data-theme="dark"] .icocard.hl { box-shadow:0 0 0 3px rgba(165,179,152,.14); }
+.icocard svg { width:38px; height:38px; stroke:var(--text-title); stroke-width:1.4; fill:none;
+  stroke-linecap:round; stroke-linejoin:round; }
+.icogrid.cols-6 .icocard svg { width:34px; height:34px; }
+.icocard .t { font-size:14px; font-weight:700; margin-top:14px; color:var(--text-title); }
+.icocard .s { font-size:12px; color:var(--text-secondary); margin-top:4px; }
+.icocard .l { font-size:12px; color:var(--text-secondary); margin-top:12px; }
+.isf { fill:var(--green-100); stroke:none; }
+.isd { fill:var(--green-600); stroke:none; }
+.icf { fill:var(--text-title); stroke:none; }
+
 @media (max-width:880px){
   .sidebar { display:none; }
   .container { padding:28px 20px 90px; }
   .dodont, .wx { grid-template-columns:1fr; }
+  .icogrid.cols-4 { grid-template-columns:repeat(2,1fr); }
+  .icogrid.cols-6 { grid-template-columns:repeat(3,1fr); }
 }
 </style>
 </head>
@@ -364,6 +385,7 @@ section { margin-bottom:64px; scroll-margin-top:84px; }
       <a href="#spacing">Spacing</a>
       <a href="#radius">Radius</a>
       <a href="#elevation">Elevation</a>
+      <a href="#iconography">Iconography</a>
     </div>
     <div class="nav-group">
       <span>Components</span>
@@ -535,6 +557,69 @@ section { margin-bottom:64px; scroll-margin-top:84px; }
           <div class="elev-demo" style="box-shadow:var(--shadow-md)">md</div>
           <div class="elev-demo" style="box-shadow:var(--shadow-lg)">lg</div>
         </div></div>
+      </section>
+
+      <!-- ICONOGRAPHY -->
+      <section id="iconography">
+        <div class="sec-head">
+          <h2>Iconography</h2>
+          <p>얇은 라인 · 부드러운 곡선. 1.4~2px 라인, 끝은 둥글게. 차콜 라인 + 은은한 세이지 면 힌트로 그립니다. 별·마법·우주·운세, 의료 차트, 키치는 금지합니다.</p>
+        </div>
+
+        <div class="sub first">Graphic Motif <span style="font-weight:500;color:var(--text-secondary);font-size:13px">— 제품 세계에서 길어 올린 4개의 모티프</span></div>
+        <div class="icogrid cols-4">
+          <div class="icocard hl"><svg viewBox="0 0 32 32">
+            <path d="M8 11.3a8.7 8.7 0 1 1 17.3 0c0 8-8 8-8 13.3a4 4 0 1 1-8 0"/>
+            <path d="M20 11.3a3.3 3.3 0 0 0-6.7 0v1.3a2.7 2.7 0 1 1 0 5.3"/>
+          </svg><div class="t">귀 라인</div><div class="s">부착 가이드</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="10"/><circle class="isf" cx="16" cy="16" r="5.5"/><circle cx="16" cy="16" r="5.5"/>
+          </svg><div class="t">패치 원형</div><div class="s">투명 패치</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <path class="isf" d="M16 5c1 6.4 3.6 9 10 10-6.4 1-9 3.6-10 10-1-6.4-3.6-9-10-10 6.4-1 9-3.6 10-10z"/>
+            <path d="M16 5c1 6.4 3.6 9 10 10-6.4 1-9 3.6-10 10-1-6.4-3.6-9-10-10 6.4-1 9-3.6 10-10z"/>
+          </svg><div class="t">글로우</div><div class="s">주얼 포인트</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <path d="M6 21c4 0 5.5-9 10-9s6 9 10 9"/>
+          </svg><div class="t">밸런스 라인</div><div class="s">케어·정돈</div></div>
+        </div>
+
+        <div class="sub">Functional Icons <span style="font-weight:500;color:var(--text-secondary);font-size:13px">— 제품·혜택 표기용</span></div>
+        <div class="icogrid cols-6">
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="10"/><path d="M16 10.5V16l3.8 2.6"/>
+          </svg><div class="l">지속력</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <path class="isf" d="M16 5.5c3.6 5.6 6.5 8.6 6.5 12.4a6.5 6.5 0 0 1-13 0C9.5 14.1 12.4 11.1 16 5.5z"/>
+            <path d="M16 5.5c3.6 5.6 6.5 8.6 6.5 12.4a6.5 6.5 0 0 1-13 0C9.5 14.1 12.4 11.1 16 5.5z"/>
+          </svg><div class="l">방수</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="9.5"/><circle cx="16" cy="16" r="5"/><circle class="icf" cx="16" cy="16" r="1.7"/>
+          </svg><div class="l">지압볼</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <path d="M16 5.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5-5.9-3.3-5.9 3.3 1.3-6.5-4.9-4.5 6.6-.8z"/>
+          </svg><div class="l">주얼</div></div>
+
+          <div class="icocard"><svg viewBox="0 0 32 32">
+            <rect class="isf" x="7.5" y="13" width="17" height="11" rx="1.5"/><rect x="7.5" y="13" width="17" height="11" rx="1.5"/>
+            <path d="M6 13h20M16 13v11"/>
+            <path d="M16 13c-1.6-3.4-6-3.4-6-.7 0 1.8 3.2 1.1 6 .7zM16 13c1.6-3.4 6-3.4 6-.7 0 1.8-3.2 1.1-6 .7z"/>
+          </svg><div class="l">선물</div></div>
+
+          <div class="icocard hl"><svg viewBox="0 0 32 32">
+            <path d="M8 11.3a8.7 8.7 0 1 1 17.3 0c0 8-8 8-8 13.3a4 4 0 1 1-8 0"/>
+            <path d="M20 11.3a3.3 3.3 0 0 0-6.7 0v1.3a2.7 2.7 0 1 1 0 5.3"/>
+            <circle class="isf" cx="13.3" cy="25.9" r="1.6"/><circle cx="13.3" cy="25.9" r="1.6"/><circle class="isd" cx="13.3" cy="25.9" r="0.7"/>
+          </svg><div class="l">귀 위치</div></div>
+        </div>
+
+        <div class="note">라인 두께 1.4~2px · 끝 둥글게 · 차콜 라인 + 세이지 면 힌트(<b>green-100</b>). 색은 토큰으로 운용하며 다크 모드에서 자동 반전됩니다.</div>
       </section>
 
       <!-- BUTTONS -->
